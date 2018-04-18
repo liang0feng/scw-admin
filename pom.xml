@@ -1,0 +1,28 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+<!--   <parent> -->
+<!--     <groupId>com.atguigu.scw</groupId> -->
+<!--     <artifactId>scw-parent</artifactId> -->
+<!--     <version>0.0.1-SNAPSHOT</version> -->
+<!--     执行父项目的相对路径 -->
+<!--     如果就算是创建一个聚合项目统一安装，也应该指定relativePath -->
+<!--     <relativePath>../scw-parent/pom.xml</relativePath> -->
+<!--   </parent> -->
+
+	<parent>
+		<groupId>com.atguigu.scw</groupId>
+		<artifactId>scw-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../maven/scw-parent/pom.xml</relativePath>
+	</parent>
+
+
+
+	<!-- 尚筹网后台管理系统的父项目，需要做聚合其他后台子模块 -->
+  <artifactId>scw-admin</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>scw-admin-common</module>
+  	<module>scw-admin-web</module>
+  </modules>
+</project>
